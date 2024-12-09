@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons"></script>
+    <!-- data aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- css aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+         :root {
+            --primary: #ffe600;
+            --bg: #010101;
+        }
+        
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        body,
+        ul,
+        li,
+        a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 0 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 50px 0;
+            font-family: 'Montserrat', sans-serif;
+            background: none;
+            margin-left: 0;
+            margin-top: 8%;
+        }
+        
+        @media (max-width: 450px) {
+            h2 {
+                margin-top: 25%;
+                margin-bottom: 0;
+            }
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .contact-form,
+        .map-container {
+            flex: 1;
+            min-width: 45%;
+        }
+        
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            background-color: #0096c7;
+        }
+        
+        .contact-form button:hover {
+            background-color: #0096c7;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 380px;
+            border: 0;
+            border-radius: 10px;
+            margin-top: -50px;
+        }
+        
+        .list {
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .list-items {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .list-items li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        
+        .list-items li strong {
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .list-items a {
+            color: #FF69B4;
+            text-decoration: none;
+        }
+        
+        .list-items a:hover {
+            text-decoration: underline;
+        }
+        
+        .list {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        .list h2 {
+            font-size: 28px;
+            color: #333333;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .list-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .list-items li {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555555;
+        }
+        
+        .list-items li strong {
+            color: #333333;
+            font-weight: bold;
+        }
+        
+        .list-items a {
+            color: #FF69B4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .list-items a:hover {
+            color: #D64590;
+            text-decoration: underline;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            animation: bounce 2s infinite;
+        }
+        
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar start-->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><img src="logokotak-removebg-preview.png" alt="" class="logoimg"></a>
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="profil.html">Profil</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <h2>Kontak Kami</h2>
+
+    <div class="contact-container">
+        <section class="list">
+
+            <ul class="list-items">
+                <li><strong>Instagram:</strong> <a href="https://www.instagram.com/username" target="_blank">instantprintjkt</a></li>
+                <li><strong>Shopee:</strong> <a href="https://twitter.com/username" target="_blank">instantprintjkt</a></li>
+                <li><strong>Tokopedia:</strong> <a href="https://www.linkedin.com/in/username" target="_blank">instantprintjkt</a></li>
+                <li><strong>Telepon:</strong> +62 8581 1073 35864</li>
+                <li><strong>Alamat:</strong> Jl. Batu kecubung 1 No. 110, batu ampar condet, Jakarta timur</li>
+            </ul>
+        </section>
+
+
+        <!-- Google Maps -->
+        <div class="map-container">
+            <h3>Lokasi Kami</h3>
+            <!-- Embed Google Maps iframe -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d521.7962488323593!2d106.85735810170851!3d-6.274584235225912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36fbef5c721%3A0x82d7a550b6881b25!2sInstant%20Print%20Jakarta!5e0!3m2!1sen!2sid!4v1733550289542!5m2!1sen!2sid"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <a href="https://whatsapp.me/087877566677" class="whatsapp-float">
+        <img src="iconwa.png" alt="">
+    </a>
+    <!-- footer start -->
+    <div class="get-in-touch">
+
+        <p>Instant Print adalah solusi cetak modern yang menghadirkan hasil berkualitas tinggi dengan layanan yang cepat, mudah, dan terpercaya. Dengan teknologi terbaru dan tim profesional, kami berkomitmen untuk memberikan pengalaman cetak terbaik bagi
+            setiap pelanggan.</p>
+        <hr>
+        <div class="icon-email">
+            <p>
+
+
+                <div class="address">
+                    <span class="icon">📍</span>
+                    <p>Jl. batu kecubung, batu ampar condet, jakarta timur</p>
+                </div>
+        </div>
+        <h4>OUR SOCIAL MEDIA</h4>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/instantprintjkt?igsh=MTEzYmc3cGl3Y2c4ZQ==" target="_blank" id="instagram">
+                <img src="instagram-40.png" alt="">
+            </a>
+            <a href="https://id.shp.ee/3BZiWKF" target="_blank" id="youtube">
+                <img src="shopee-logo-1.png" alt="">
+            </a>
+            <a href="https://tokopedia.link/instantprintjkt" target="_blank" id="facebook">
+                <img src="tokopedia-logo-icon-tokopedia-115638033660bhcr3nbcq-removebg-preview.png" alt="">
+            </a>
+
+        </div>
+        <h3 style="color:white;">&copy; 2024 ALL RIGHT RESERVED</h3>
+    </div>
+    <!-- Feather Icons -->
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- My JS -->
+    <script src="script.js" defer></script>
+    <!-- data aos js -->
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+
+</html>

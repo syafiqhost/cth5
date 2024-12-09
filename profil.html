@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Instant Print</title>
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons"></script>
+    <!-- data aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- css aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li,
+        a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        /* Global Styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Header */
+        /* About Us Section */
+        
+        .about-us {
+            padding: 50px 0;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(239, 239, 239, 0.432)), url(bgcolor.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+            /* White color */
+            text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF;
+            /* Neon glow effect */
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .about-text .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF1493;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .about-text .btn:hover {
+            background-color: #fe078b;
+        }
+        
+        .about-image {
+            margin-top: 5%;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            height: auto;
+        }
+        /* Vision & Mission Section */
+        
+        .vision-mission {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .vision,
+        .mission {
+            margin-bottom: 20px;
+        }
+        
+        .vision h3,
+        .mission h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .vision p,
+        .mission p {
+            font-size: 16px;
+            color: #666;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        footer p {
+            font-size: 14px;
+        }
+        /* Global Reset */
+        /* Container for Image Cards */
+        
+        .imggg-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        /* Individual Image Card */
+        
+        .imggg {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 20px);
+            /* Adjust for spacing */
+            max-width: 300px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .imggg img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .imggg h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: black;
+        }
+        
+        .imggg p {
+            font-size: 14px;
+            color: #666;
+        }
+        /* Hover Effect */
+        
+        .imggg:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .imggg {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .imggg {
+                width: 100%;
+            }
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                margin-bottom: 20px;
+            }
+            .about-content {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 20px;
+                margin-top: 110px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="navbar-logo"><img src="logokotak-removebg-preview.png" alt="" class="logoimg"></a>
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="profil.html">Profil</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- cscard start -->
+
+    <!-- Profil Section -->
+    <section class="about-us">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Profile Instant Print</h2>
+                    <p>
+                        Instant Print adalah penyedia solusi cetak berkualitas tinggi yang dapat disesuaikan dengan kebutuhan Anda. Dari kartu kustom dan mug hingga dekorasi akrilik dan produk bisnis profesional, kami menjamin hasil cetak yang luar biasa setiap kali.
+                    </p>
+                    <p>
+                        Berdiri sejak tahun 2021, misi kami adalah membuat cetakan kustom yang dapat diakses, efisien, dan terjangkau. Kami bangga dengan teknologi cetak canggih dan tim profesional yang berkomitmen untuk melampaui harapan Anda.
+                    </p>
+                    <a href="services.html" class="btn">Explore Our Services</a>
+                </div>
+                <div class="about-image">
+                    <img src="logobulat-removebg-preview.png" alt="About Instant Print">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="imggg-container">
+
+        <div class="imggg">
+            <img src="akrilik.png" alt="Image 1">
+            <h3>Customize Design Akrilik</h3>
+            <p>Tampilkan desain unik dengan akrilik yang dapat disesuaikan sesuai kebutuhan Anda.</p>
+        </div>
+        <div class="imggg">
+            <img src="flashdisk.jpg" alt="Image 2">
+            <h3>Customize Design flashdisk</h3>
+            <p>Flashdisk dengan desain kustom yang praktis dan stylish untuk kebutuhan pribadi atau bisnis.</p>
+        </div>
+        <div class="imggg">
+            <img src="slide66.jpg" alt="Image 3">
+            <h3>Customize Design Dompet Kartu</h3>
+            <p>Buat dompet kartu dengan desain yang mencerminkan gaya dan kepribadian Anda.</p>
+        </div>
+        <div class="imggg">
+            <img src="lanyard.jpg" alt="Image 4">
+            <h3>Customize Design Lanyard</h3>
+            <p>Lanyard yang dapat disesuaikan untuk keperluan acara atau identitas perusahaan.</p>
+        </div>
+        <div class="imggg">
+            <img src="pb.jpg" alt="Image 5">
+            <h3>Customize Design Power Bank</h3>
+            <p>Power bank dengan desain khusus yang cocok untuk kebutuhan sehari-hari Anda.</p>
+        </div>
+    </div>
+    <a href="https://wa.me/6287877566677" class="whatsapp-float" target="_blank" title="Hubungi kami di WhatsApp">
+        <img src="iconwa.png" alt="WhatsApp Icon">
+    </a>
+    <!-- footer start -->
+    <div class="get-in-touch">
+
+        <p>Instant Print adalah solusi cetak modern yang menghadirkan hasil berkualitas tinggi dengan layanan yang cepat, mudah, dan terpercaya. Dengan teknologi terbaru dan tim profesional, kami berkomitmen untuk memberikan pengalaman cetak terbaik bagi
+            setiap pelanggan.</p>
+        <hr>
+        <div class="icon-email">
+            <p>
+
+
+                <div class="address">
+                    <span class="icon">📍</span>
+                    <p>Jl. batu kecubung, batu ampar condet, jakarta timur</p>
+                </div>
+        </div>
+        <h4>OUR SOCIAL MEDIA</h4>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/instantprintjkt?igsh=MTEzYmc3cGl3Y2c4ZQ==" target="_blank" id="instagram">
+                <img src="instagram-40.png" alt="">
+            </a>
+            <a href="https://id.shp.ee/3BZiWKF" target="_blank" id="youtube">
+                <img src="shopee-logo-1.png" alt="">
+            </a>
+            <a href="https://tokopedia.link/instantprintjkt" target="_blank" id="facebook">
+                <img src="tokopedia-logo-icon-tokopedia-115638033660bhcr3nbcq-removebg-preview.png" alt="">
+            </a>
+
+        </div>
+        <h3 style="color:white;">&copy; 2024 ALL RIGHT RESERVED</h3>
+    </div>
+
+    <!-- footer end -->
+
+
+    <!-- Feather Icons -->
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- My JS -->
+    <script src="script.js" defer></script>
+    <!-- data aos js -->
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+
+</html>
